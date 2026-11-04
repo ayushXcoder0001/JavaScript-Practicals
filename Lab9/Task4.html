@@ -1,0 +1,47 @@
+<!-- Name: Ayush Patel
+ Roll No.: 2510303157
+ Assignment No.: 9
+ Task No.: 1 -->
+ 
+ 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab 9 - Task 4</title>
+</head>
+<body>
+
+    <h2>What is 2 + 3?</h2>
+
+    <label>
+        <input type="radio" name="answer" value="4"> 4
+    </label><br>
+
+    <label>
+        <input type="radio" name="answer" value="5"> 5
+    </label><br>
+
+    <label>
+        <input type="radio" name="answer" value="6"> 6
+    </label><br><br>
+
+    <button onclick="checkAnswer()">Check answer</button>
+
+    <h3 id="result"></h3>
+
+    <script>
+        function checkAnswer() {
+            const selected = document.querySelector(
+                'input[name="answer"]:checked'
+            );
+
+            if (selected && selected.value === "5") {
+                document.getElementById("result").textContent = "Correct";
+            } else {
+                document.getElementById("result").textContent = "Try again";
+            }
+        }
+    </script>
+
+</body>
+</html>

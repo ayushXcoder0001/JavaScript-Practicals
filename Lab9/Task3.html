@@ -1,0 +1,31 @@
+<!-- Name: Ayush Patel
+ Roll No.: 2510303157
+ Assignment No.: 9
+ Task No.: 1 -->
+ 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab 9 - Task 3</title>
+</head>
+<body>
+
+  
+    <h2>Save Your Note</h2>
+
+    <input type="text" id="note" placeholder="Enter your text">
+    <button onclick="saveNote()">Save</button>
+
+    <script>
+        const noteBox = document.getElementById("note");
+
+        noteBox.value = localStorage.getItem("note") || "";
+
+        function saveNote() {
+            localStorage.setItem("note", noteBox.value);
+            alert("Note saved successfully!");
+        }
+    </script>
+
+</body>
+</html>
